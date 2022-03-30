@@ -1,56 +1,113 @@
 :root{
-    --color1: rgb(50, 50, 50);
+    --color0: gray;
+    --color1: aqua;
+    --ball-size: 15px;
 }
 
 body{
-    background-color: yellow;
-}
-
-ul{
+    background-color: black;
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px;
 }
 
-a{
-    padding: 10px 20px;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color1);
-    font-size: 20px;
-    text-transform: capitalize;
-    position: relative;
-    overflow: hidden;
+
+/* spiner3 */
+@keyframes spiner3{
+    50%{transform: translateY(-15px);}
 }
 
-a::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
+.spiner3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.spiner3 .a{
+    width: var(--ball-size);
+    height: var(--ball-size);
     background-color: var(--color1);
-    top: 0;
-    left: -100%;
-    transition-duration: 0.5s;
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner3;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
 }
 
-a::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
+.spiner3 .b{
+    width: var(--ball-size);
+    height: var(--ball-size);
     background-color: var(--color1);
-    bottom: 0;
-    right: -100%;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner3;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
 }
 
-a:hover::before{
-    transform: translateX(100%);
+.spiner3 .c{
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--color1);
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner3;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
 }
 
-a:hover::after{
-    transform: translateX(-100%);
+
+/* spiner4 */
+@keyframes spiner4{
+    50%{transform: translateY(-15px);}
+}
+
+.spiner4{
+    display: flex;
+    justify-content: space-around;
+}
+
+.spiner4 .a{
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--color1);
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner4;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.spiner4 .b{
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--color1);
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner4;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.spiner4 .c{
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--color1);
+    border-radius: 50%;
+    margin: 10px;
+
+    animation-name: spiner4;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
 }
